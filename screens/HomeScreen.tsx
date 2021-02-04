@@ -1,13 +1,19 @@
 import * as React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
-import EditScreenInfo from "../components/EditScreenInfo";
-import { Text, View } from "../components/Themed";
+import Album from "../components/Album";
 
-export default function TabTwoScreen() {
+const album = {
+  id: "1",
+  imageUri:
+    "https://i.pinimg.com/originals/31/a5/f8/31a5f8a724e12d133e08bb6d72d9ed57.jpg",
+  artistHeadLine: "Taylor Swift, Avicci",
+};
+
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>HELLOOOO 2</Text>
+      <Album album={album} />
     </View>
   );
 }
