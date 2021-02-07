@@ -1,19 +1,40 @@
 import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-import Album from "../components/Album";
+import AlbumCategory from "../components/AlbumCategory";
 
-const album = {
+const albumCategory = {
   id: "1",
-  imageUri:
-    "https://i.pinimg.com/originals/31/a5/f8/31a5f8a724e12d133e08bb6d72d9ed57.jpg",
-  artistHeadLine: "Taylor Swift, Avicci",
+  title: "Happy coding",
+  albums: [
+    {
+      id: "1",
+      imageUri:
+        "https://i.pinimg.com/originals/31/a5/f8/31a5f8a724e12d133e08bb6d72d9ed57.jpg",
+      artistHeadLine: "ACDC, Matellica, Megadeth",
+    },
+    {
+      id: "2",
+      imageUri:
+        "https://glide-assets-media.s3.amazonaws.com/wp-content/uploads/2013/10/21170545/Radiohead-Pablo-Honey-768x768.jpg",
+      artistHeadLine: "ACDC, Matellica, Megadeth",
+    },
+    {
+      id: "3",
+      imageUri:
+        "https://glide-assets-media.s3.amazonaws.com/wp-content/uploads/2013/10/21170554/AFI-The-Art-of-Drowning.jpg",
+      artistHeadLine: "Anthrax, NOFX",
+    },
+  ],
 };
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Album album={album} />
+      <AlbumCategory
+        title={albumCategory.title}
+        albums={albumCategory.albums}
+      />
     </View>
   );
 }
