@@ -7,16 +7,16 @@ export type SongListItemProp = {
   song: Song;
 };
 
+//This component will dispplay
 const SongListItem = (props: SongListItemProp) => {
   const { song } = props; //this is to destruct song out of props (same as props.song.imageUri)
   return (
-    <View>
-      {/* Image Cover */}
+    <View style={styles.container}>
       <Image source={{ uri: song.imageUri }} style={styles.image} />
-      {/* Title */}
-      <Text style={styles.title}>{song.title}</Text>
-      {/* Artist */}
-      <Text style={styles.artist}>{song.artist}</Text>
+      <View style={styles.rightContainer}>
+        <Text style={styles.title}>{song.title}</Text>
+        <Text style={styles.artist}>{song.artist}</Text>
+      </View>
     </View>
   );
 };
