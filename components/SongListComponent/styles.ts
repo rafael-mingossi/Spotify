@@ -4,10 +4,11 @@ const styles = StyleSheet.create({
   image: {
     width: 75,
     height: 75,
+    marginLeft: 5,
   },
   title: {
     color: "white",
-    fontSize: 24,
+    fontSize: 20,
   },
   artist: {
     color: "lightgray",
