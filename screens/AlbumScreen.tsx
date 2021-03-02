@@ -19,7 +19,7 @@ const AlbumScreen = () => {
         data={albumDetails.songs}
         renderItem={({ item }) => <SongListItem song={item} />}
         keyExtractor={(item) => item.id}
-        ListHeaderComponent={AlbumHeader}
+        ListHeaderComponent={() => <AlbumHeader album={albumDetails} />}
       />
     </View>
   );
